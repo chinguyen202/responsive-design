@@ -1,0 +1,11 @@
+@use '../variables/colors';
+
+.btn-light {
+  background-color: colors.$light-color;
+  color: colors.$dark-color;
+}
+
+.btn-dark {
+  background-color: colors.$dark-color;
+  color: colors.$light-color;
+}

@@ -1,0 +1,86 @@
+@use '../variables/colors';
+@use '../variables/fonts';
+
+.pinned-container {
+  $cards: (1, 2, 3, 4, 5);
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas:
+    'card1 card1 card2 card3'
+    'card1 card1 card4 card5';
+
+  & article {
+    padding: 2em;
+    color: colors.$light-color;
+    border-radius: 2em;
+  }
+  & article:hover {
+    transform: translateY(-0.5em);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @each $card in $cards {
+    & article:nth-child(#{$card}) {
+      grid-area: card#{$card};
+      @if $card == 1 {
+        & h3 {
+          font-size: fonts.$h3-large;
+        }
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.3)
+          ),
+          url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      else {
+        & h3 {
+          font-size: fonts.$h3-small;
+        }
+      }
+
+      @if $card == 2 {
+        background-image: linear-gradient(
+            rgba(11, 50, 206, 0.3),
+            rgba(11, 72, 241, 0.3)
+          ),
+          url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      @if $card == 3 {
+        background-image: linear-gradient(
+            rgba(228, 9, 184, 0.3),
+            rgba(225, 0, 218, 0.3)
+          ),
+          url('https://plus.unsplash.com/premium_photo-1675805016070-5ca98ba55944?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3387&q=80');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      @if $card == 4 {
+        background-image: linear-gradient(
+            rgba(252, 236, 9, 0.3),
+            rgba(241, 233, 11, 0.3)
+          ),
+          url('https://plus.unsplash.com/premium_photo-1673972079383-d20945f96059?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3542&q=80');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      @if $card == 5 {
+        background-image: linear-gradient(
+            rgba(159, 12, 218, 0.3),
+            rgba(138, 5, 226, 0.3)
+          ),
+          url('https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3538&q=80');
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

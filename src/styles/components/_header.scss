@@ -27,7 +27,7 @@ header {
         border-radius: 100%;
         left: calc(100% - 1em);
       }
-      & active::after {
+      &:current {
         content: '';
         position: absolute;
         top: -1em;

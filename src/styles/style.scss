@@ -1,5 +1,8 @@
 @use 'components/header';
 @use 'variables/colors';
+@use 'components/main';
+@use 'variables/fonts';
+@use 'shared/buttons';
 
 * {
   margin: 0;
@@ -12,4 +15,13 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-size: 1.5em;
+  padding: 2em;
+}
+
+button {
+  font-size: fonts.$btn;
+  border-radius: 2rem;
+  padding: 0.4rem 0.6rem;
+  text-transform: uppercase;
+  border: none;
 }
