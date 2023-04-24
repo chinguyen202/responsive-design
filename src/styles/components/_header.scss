@@ -1,0 +1,47 @@
+@use '../variables/colors';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  & img {
+    height: 3em;
+    color: colors.$light-color;
+  }
+
+  & nav {
+    display: flex;
+    align-items: center;
+    & a {
+      color: colors.$light-color;
+      text-decoration: none;
+      margin-left: 2em;
+      position: relative;
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: -1em;
+        background: colors.$active-color;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 100%;
+        left: calc(100% - 1em);
+      }
+      & active::after {
+        content: '';
+        position: absolute;
+        top: -1em;
+        background: colors.$active-color;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 100%;
+        left: calc(100% - 1em);
+      }
+    }
+    & i {
+      color: colors.$light-color;
+      text-decoration: none;
+      margin-left: 2em;
+    }
+  }
+}

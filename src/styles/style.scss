@@ -1,0 +1,15 @@
+@use 'components/header';
+@use 'variables/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: colors.$dark-color;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 1.5em;
+}

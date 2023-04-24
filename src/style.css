@@ -1,3 +1,59 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+}
+header img {
+  height: 3em;
+  color: #edf2f4;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  color: #edf2f4;
+  text-decoration: none;
+  margin-left: 2em;
+  position: relative;
+}
+header nav a:hover::before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  background: #fb8500;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  left: calc(100% - 1em);
+}
+header nav a active::after {
+  content: "";
+  position: absolute;
+  top: -1em;
+  background: #fb8500;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  left: calc(100% - 1em);
+}
+header nav i {
+  color: #edf2f4;
+  text-decoration: none;
+  margin-left: 2em;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2d42;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-size: 1.5em;
+}
 
 /*# sourceMappingURL=style.css.map */
