@@ -168,16 +168,35 @@ header nav i {
   justify-content: center;
   color: #edf2f4;
 }
+.contact-us form {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+}
+.contact-us form input {
+  text-align: center;
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1em solid #edf2f4;
+  width: 30%;
+  transition: width 1s linear;
+}
+.contact-us form input:focus {
+  outline: none;
+  width: 50%;
+}
 
 .typewriter {
   position: relative;
   font-size: 2.5em;
   width: 24em;
   overflow: hidden;
+  max-width: fit-content;
   border-right: 0.15em solid #edf2f4;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(20) infinite normal;
+  animation: typewriter 4s steps(30) infinite alternate;
 }
 
 /* The typing effect */
@@ -187,14 +206,6 @@ header nav i {
   }
   to {
     width: 24;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
   }
 }
 .btn-light {

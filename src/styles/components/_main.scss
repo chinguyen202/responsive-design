@@ -159,6 +159,24 @@
 .contact-us {
   justify-content: center;
   color: colors.$light-color;
+  & form {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+    & input {
+      text-align: center;
+      font-size: 1em;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.1em solid colors.$light-color;
+      width: 30%;
+      transition: width 1s linear;
+      &:focus {
+        outline: none;
+        width: 50%;
+      }
+    }
+  }
 }
 
 .typewriter {
@@ -166,11 +184,11 @@
   font-size: fonts.$h3-large;
   width: 24em;
   overflow: hidden;
+  max-width: fit-content;
   border-right: 0.15em solid colors.$light-color;
   white-space: nowrap;
   margin: 0 auto;
-  animation: typewriter 4s steps(30) 1s 1 normal both,
-    blinkTextCursor 500ms steps(20) infinite normal;
+  animation: typewriter 4s steps(30) infinite alternate;
 }
 
 /* The typing effect */
@@ -180,14 +198,5 @@
   }
   to {
     width: 24;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
   }
 }
