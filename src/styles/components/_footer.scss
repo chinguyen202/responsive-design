@@ -1,0 +1,39 @@
+@use '../variables/colors';
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  & p {
+    color: colors.$light-color;
+    font-size: 1em;
+    margin: 1em;
+  }
+  & .nav-container {
+    display: flex;
+    margin: 1em;
+    justify-content: space-between;
+
+    & a {
+      color: colors.$light-color;
+      text-decoration: none;
+      position: relative;
+      margin-right: 2em;
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: -1em;
+        background: colors.$active-color;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 100%;
+        left: calc(100% - 1em);
+      }
+    }
+    & i {
+      color: colors.$light-color;
+      text-decoration: none;
+      margin-left: 0.5em;
+    }
+  }
+}

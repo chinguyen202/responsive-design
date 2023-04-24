@@ -310,6 +310,43 @@ header nav i {
   transition: all 0.3s ease-in-out;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+footer p {
+  color: #edf2f4;
+  font-size: 1em;
+  margin: 1em;
+}
+footer .nav-container {
+  display: flex;
+  margin: 1em;
+  justify-content: space-between;
+}
+footer .nav-container a {
+  color: #edf2f4;
+  text-decoration: none;
+  position: relative;
+  margin-right: 2em;
+}
+footer .nav-container a:hover::before {
+  content: "";
+  position: absolute;
+  top: -1em;
+  background: #fb8500;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  left: calc(100% - 1em);
+}
+footer .nav-container i {
+  color: #edf2f4;
+  text-decoration: none;
+  margin-left: 0.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
