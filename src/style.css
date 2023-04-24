@@ -44,6 +44,7 @@ header nav i {
 }
 
 .pinned-container {
+  padding: 1em;
   display: grid;
   grid-gap: 2em;
   grid-template-areas: "card1 card1 card2 card3" "card1 card1 card4 card5";
@@ -163,6 +164,39 @@ header nav i {
   gap: 2em;
 }
 
+.contact-us {
+  justify-content: center;
+  color: #edf2f4;
+}
+
+.typewriter {
+  position: relative;
+  font-size: 2.5em;
+  width: 24em;
+  overflow: hidden;
+  border-right: 0.15em solid #edf2f4;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(20) infinite normal;
+}
+
+/* The typing effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
 .btn-light {
   background-color: #edf2f4;
   color: #2b2d42;
@@ -184,6 +218,20 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
   padding: 2em;
+}
+
+aside {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  padding: 1em;
+  margin-right: 1em;
+}
+aside p {
+  font-size: 1em;
+  color: #edf2f4;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
 }
 
 button {

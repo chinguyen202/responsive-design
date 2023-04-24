@@ -17,6 +17,20 @@ body {
   padding: 2em;
 }
 
+aside {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  padding: 1em;
+  margin-right: 1em;
+  & p {
+    font-size: 1em;
+    color: colors.$light-color;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+  }
+}
+
 button {
   font-size: fonts.$btn;
   border-radius: 2rem;

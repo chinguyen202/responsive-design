@@ -3,6 +3,7 @@
 
 .pinned-container {
   $cards: (1, 2, 3, 4, 5);
+  padding: 1em;
   display: grid;
   grid-gap: 2em;
   grid-template-areas:
@@ -152,4 +153,41 @@
 .button-container {
   padding-bottom: 2em;
   gap: 2em;
+}
+
+// Contact us section styling
+.contact-us {
+  justify-content: center;
+  color: colors.$light-color;
+}
+
+.typewriter {
+  position: relative;
+  font-size: fonts.$h3-large;
+  width: 24em;
+  overflow: hidden;
+  border-right: 0.15em solid colors.$light-color;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 4s steps(30) 1s 1 normal both,
+    blinkTextCursor 500ms steps(20) infinite normal;
+}
+
+/* The typing effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
