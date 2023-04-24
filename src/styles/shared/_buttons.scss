@@ -9,3 +9,20 @@
   background-color: colors.$dark-color;
   color: colors.$light-color;
 }
+
+.loading-btn {
+  padding: 1em;
+  color: colors.$light-color;
+  background-color: colors.$dark-color;
+  border-radius: 1em;
+  border: 1px solid colors.$light-color;
+  padding: 1em;
+  width: 50%;
+  margin: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover {
+    background: colors.$active-color;
+    transition: all 0.3s ease-in-out;
+  }
+}
