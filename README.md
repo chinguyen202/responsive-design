@@ -1,8 +1,10 @@
 ## Responsive design
 
-The project is created to practice CSS, SASS, especially Flexbox and Grid sytem as well as CSS animations.
+The project is created to practice CSS, SASS, especially Flexbox and Grid system as well as CSS animations.
 
-## Link to the website (added later)
+## Link to the website
+
+https://users.metropolia.fi/~chinguy/Responsive-design/src/
 
 ## Tech stacks
 
@@ -18,20 +20,34 @@ Clone the repo:
 git clone git@github.com:chinguyen202/fs15_2-responsive-design.git
 ```
 
-Install SASS globally if you haven't
+Install packages
 
 ```
-npm install -g sass
+npm i
 ```
 
-Initialize npm package in the project
+## Project Structure
 
 ```
-npm init
-```
+    ├── src
+    ├    ├── styles
+    ├    ├   ├── style.scss
+    ├    ├   ├── components
+    ├    ├   ├   ├── footer.scss
+    ├    ├   ├   ├── header.scss
+    ├    ├   ├   ├── main.scss
+    ├    ├   ├── shared
+    ├    ├   ├   ├── buttons.scss
+    ├    ├   ├── variables
+    ├    ├       ├── colors.scss
+    ├    ├       ├── fonts.scss
+    ├    ├
+    ├    ├
+    ├    ├── index.html
+    ├    ├── style.css
+    ├
+    ├── package.json
+    ├── README.md
+    ├── .gitignore
 
-Check the scripts in package.json file. The custom script for the project is
-
-```
-npm run compile:watch
 ```
